@@ -137,7 +137,10 @@ from PIL import Image
 import time
 import numpy as np
 import torch
-from TimeSformer.timesformer.models.vit import TimeSformer
+import sys
+sys.path.append('./TimeSformer')
+
+from timesformer.models.vit import TimeSformer
 
 from potassium import Potassium, Request, Response
 
