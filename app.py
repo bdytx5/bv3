@@ -97,9 +97,11 @@ app = Potassium("my_app")
 
 # Load ONNX model and example input
 onnx_filename = "timesformer_modelOrig.onnx"
-ort_session = onnxruntime.InferenceSession(onnx_filename, providers=['CUDAExecutionProvider'])
+ort_session = onnxruntime.InferenceSession(onnx_filename)
 
 example_input = np.random.randn(1, 3, 32, 224, 224).astype(np.float32)
+print(onnx_filename.get_device())
+
 
 # @app.init runs at startup, and loads models into the app's context
 @app.init
