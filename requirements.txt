@@ -3,3 +3,5 @@ torch
 transformers
 onnxruntime
 onnxruntime-gpu
+einops
+fvcore
